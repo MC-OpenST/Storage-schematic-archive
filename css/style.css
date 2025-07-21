@@ -94,7 +94,6 @@ body {
 }
 
 .search ul.loading::before {
-    content: "正在加载图纸，请稍候...";
     display: block;
     color: var(--pagination-info);
     padding: 10px;

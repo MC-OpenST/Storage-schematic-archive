@@ -1,6 +1,3 @@
-// 负责分页、搜索、渲染文件列表和分页按钮
-
-const pagination = document.getElementById("pagination");
 const fileList = document.getElementById("file-list");
 const searchBox = document.getElementById("searchBox");
 
@@ -80,7 +77,7 @@ searchBox.addEventListener('input', (e) => {
 async function init() {
   try {
     fileList.innerHTML = '加载中...';
-    const res = await fetch('https://your-worker-endpoint');
+    const res = await fetch('https://openst.weizhihan3.workers.dev/contents/contents/schematic');
     files = await res.json();
     filteredFiles = files;
     renderTree(files, fileList);
